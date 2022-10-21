@@ -258,6 +258,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-left: 15%;
     }
 
     .portfolioWorkText {
@@ -266,8 +267,8 @@ footer {
         grid-column: 2/2;
         display: flex;
         flex-direction: column;
-        align-items: left;
         justify-content: center;
+        padding-right: 15%;
     }
 
     .aboutMe {
@@ -293,7 +294,6 @@ footer {
         text-align: left;
         display: flex;
         flex-direction: column;
-        align-items: right;
         justify-content: center;
     }
 
