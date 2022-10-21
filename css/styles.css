@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto 1fr 3fr;
+    font-family: 'Krub', sans-serif;
+    background-color: rgb(23, 23, 23);
+    color: white;
+}
+
+h1 , h2 , h3 , h4 {
+    font-family: 'Sail', cursive;
+    padding: 0 2%;
+}
+
+hr {
+    border: 3px solid black;
+}
+
+header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    background-color: rgb(215, 215, 215);
+    background-image: linear-gradient(to bottom right, rgb(215, 215, 215), white);
+    color: rgb(23, 23, 23);
+}
+
+header h1 {
+    padding: 2%;
+}
+
+.aboutMe {
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.myWork {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 3/4;
+    background-color: rgba(226, 197, 201, 1);
+    background-image: linear-gradient(to bottom right, rgba(244, 231, 232, 1), rgba(226, 197, 201, 1));
+    color: rgb(23, 23, 23);
+}
+
+.portfolioWorkImg a:hover {
+    opacity: 0.5;
+    transition: .6s;
+}
+
+.contactMe a:hover {
+    opacity: 0.5;
+    transition: .6s;
+}
+
+.education {
+    grid-column: 1/4;
+    grid-row: 4/5;
+    margin: 0;
+    padding: 2.5%;
+    font-size: 1.2em;
+    background-color: rgb(215, 215, 215);
+    background-image: linear-gradient(to bottom right, rgb(215, 215, 215), white);
+    color: rgb(23, 23, 23);
+}
+
+.education h2 {
+    font-size: 2.2em;
+}
+
+.educationItem {
+    text-align: left;
+    margin-left: 10%;
+}
+
+footer {
+    padding: 0.5%;
+    grid-column: 1/4;
+    grid-row: 5/6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.2em;
+}
+
+ /* Style the navigation menu */
+ .topnav {
+    overflow: hidden;
+    /*background-color: #333;*/
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    font-family: 'Krub', sans-serif;
+    display: none;
+    font-size: 0.3em;
+    text-align: right;
+    background-color: rgba(226, 197, 201, 1);
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 5em;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2em;
+    margin-left: 10%;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    font-family: 'Sail', cursive;
+    color: white;
+    margin-right: 10%;
+  } 
+
+  .contactMe {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+    gap: 10%;
+    background-color: rgba(226, 197, 201, 1);
+    padding: 1.5%;
+  }
+
+  .contactMe img {
+    max-width: 67px;
+    width: 100%;
+  }
+
+  .myWork img{
+    max-width: 500px;
+    width: 100%;
+    margin-left: 1.5%;
+  }
+
+  .aboutMe img {
+        max-width: 400px;
+        width: 100%;
+  }
+
+
+  /* ......Responsive-ness ...... */
+
+@media screen and (max-width: 950px) {
+
+    .aboutMeImg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .aboutMeText {
+        margin: 0 5%;
+        font-size: 1.1em;
+    }
+
+    .aboutMeTitle {
+        text-align: center;
+        font-size: 1.9em;
+    }
+
+    .portfolioWorkImg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        padding: 0;
+    }
+
+    .portfolioWorkText {
+        margin: 0 5% 5% 5%;
+        padding: 0;
+        font-size: 1.2em;
+        border-bottom: dashed 2px black;
+    }
+
+    .workTitle {
+        text-align: center;
+        font-size: 1.9em;
+    }
+}
+
+/* large viewports */
+
+  @media screen and (min-width: 950px) {
+
+    /*changing nav from hamburger menu to nav bar */
+
+    .topnav{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .topnav a.icon {
+        display: none;
+    }
+
+    .topnav #myLinks {
+        grid-column: 2/2;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+    }
+
+    .topnav #myLinks a {
+        border: solid 3px black;
+    }
+
+    .active {
+        color: white;
+        text-align: left;
+    } 
+
+    /*end of nav work area */
+
+    .myWork {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .workTitle {
+        font-size: 2.2em;
+        grid-column: 1/3;
+        grid-row: 1/1;
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .portfolioWorkImg {
+        grid-column: 1/2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .portfolioWorkText {
+        padding: 2.5%;
+        font-size: 1.2em;
+        grid-column: 2/2;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+
+    .aboutMe {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  1fr;
+    }
+
+    .aboutMeTitle {
+        font-size: 2.2em;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        margin: 0;
+        padding: 0;
+        align-self: flex-end;
+    }
+
+    .aboutMeText {
+        padding: 2.5%;
+        font-size: 1.2em;
+        grid-column: 1/2;
+        grid-row: 2/2;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        justify-content: center;
+    }
+
+    .aboutMeImg {
+        grid-column: 2/2;
+        grid-row: 2/2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+  }
+
+
+
